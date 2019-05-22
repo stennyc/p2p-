@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* canvas {
+  display: block;
+} */
+html {
+  font-size: 75px;
+  height: 100%;
+  width: 100%;
+}
+body {
+  height: 100%;
+  width: 100%;
+
+  background-color: #f7f7f7;
+}
+.header {
+  position: relative;
+}
+.header {
+  position: relative;
+  font-size: 0.453333rem /* 34/75 */; /* 50/75 */
+  text-align: center;
+  height: 1.2rem /* 90/75 */;
+  line-height: 1.2rem /* 90/75 */;
+  /* border-bottom: 1px solid #ccc; */
+  background-color: #fff;
+}
+.hand {
+  position: absolute;
+  top: 1.574074rem /* 85/54 */;
+  left: 0.37037rem /* 20/54 */;
+  font-size: 0.592593rem /* 32/54 */;
+  color: #b5b5b5;
+}
+.header .left {
+  position: absolute;
+  top: 0px;
+  left: 0.466667rem /* 35/75 */;
+  font-weight: 700;
+  font-size: 0.481481rem; /* 26/54 */
+}
+.header .left a {
+  text-decoration: none;
+  color: #000;
+}
+.signature {
+  height: 6.074074rem /* 328/54 */;
+  width: 100%;
+  margin-top: 0.462963rem; /* 25/54 */
+  box-sizing: border-box;
+}
+#canvasId {
+  background-color: #fff;
+}
+.btn {
+  width: 100%;
+  text-align: center;
+}
+.button1,
+.button2,
+.button3 {
+  width: 88%;
+  height: 60px;
+  font-size: 0.62963rem /* 34/54 */;
+  color: #fff;
+  border: none;
+  border-radius: 0.277778rem; /* 15/54 */
+  margin-bottom: 0.425926rem; /* 23/54 */
+}
+.button1 {
+  background-color: #2b90ec;
+}
+.button2 {
+  background-color: #6642ea;
+}
+.button3 {
+  background-color: #b4b4b4;
+}
+
+.title {
+  font-size: 0.318519rem; /* 28/54 */
+  color: #999999;
+  margin-top: 0.648148rem; /* 35/54 */
+  margin-bottom: 0.888889rem; /* 48/54 */
+  padding-left: 0.666667rem /* 36/54 */;
+  box-sizing: border-box;
+}
+.title2 {
+  position: fixed;
+  width: 50% /* 300/54 */;
+  height: 3.703704rem /* 200/54 */;
+  background-color: #fff;
+  top: 3.703704rem; /* 200/54 */
+  left: 25%;
+  text-align: center;
+  display: none;
+  font-size: 0.444444rem /* 24/54 */;
+  border: 1px solid #000;
+  padding-top: 1.851852rem /* 100/54 */;
+  box-sizing: border-box;
+}
+
+.btnCanel {
+  margin: 0.285185rem /* 10/54 */ auto;
+  display: block;
+  width: 1.666667rem /* 90/54 */;
+  height: 0.655556rem /* 30/54 */;
+  border-radius: 0.092593rem; /* 5/54 */
+  border: none;
+  background-color: #169bd5;
+  color: #fff;
+}

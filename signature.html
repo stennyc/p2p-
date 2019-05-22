@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=400" />
+    <title>钱包</title>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/signature.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="left"><a href="javascript:history.go(-1)"><</a></div>
+      <h2 class="lend">
+        签名
+      </h2>
+    </div>
+    <div class="title2">
+      <p>你已经提交了合同</p>
+      <button class="btnCanel">取消</button>
+    </div>
+    <div class="hand"><p>请手写签名</p></div>
+    <canvas id="canvasId" width="400" height="328"></canvas><br />
+    <p class="title">提示: 确认签字后关闭窗口即可。</p>
+    <div class="btn">
+      <input type="button" value="确认" class="button1" onclick="hw.save();" />
+      <input type="button" value="重签" class="button2" onclick="hw.clear();" />
+      <input type="button" value="返回" class="button3" onclick="hw.clear();" />
+    </div>
+    <!-- <div id="imgDiv"></div> -->
+  </body>
+  <script src="./lib/jquery-1.12.4.min.js"></script>
+  <script src="./lib/rem.js"></script>
+  <script src="./js/signature.js"></script>
+</html>
