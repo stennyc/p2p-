@@ -16,17 +16,19 @@
         签名
       </h2>
     </div>
-    <div class="title2">
-      <p>你已经提交了合同</p>
-      <button class="btnCanel">取消</button>
+    <div class="motaik">
+      <div class="title2">
+        <p>你已经提交了合同</p>
+        <button class="btnCanel">确认</button>
+      </div>
     </div>
     <div class="hand"><p>请手写签名</p></div>
     <canvas id="canvasId" width="400" height="328"></canvas><br />
     <p class="title">提示: 确认签字后关闭窗口即可。</p>
     <div class="btn">
-      <input type="button" value="确认" class="button1" onclick="hw.save();" />
-      <input type="button" value="重签" class="button2" onclick="hw.clear();" />
-      <input type="button" value="返回" class="button3" onclick="hw.clear();" />
+      <div class="button1" onclick="hw.save();">确认</div>
+      <div class="button2" onclick="hw.clear();">重签</div>
+      <div class="button3">返回</div>
     </div>
     <!-- <div id="imgDiv"></div> -->
   </body>

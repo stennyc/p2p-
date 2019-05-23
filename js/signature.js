@@ -83,6 +83,10 @@ Handwriting.prototype.save = function() {
   var url = c.toDataURL('image/png'),
     // imgDiv = document.getElementById('imgDiv')
     img = new Image()
+  // console.log($(c).attr('width'))
+  if ($(c).attr('width') == 300) {
+    return
+  }
   img.src = url
   img.width = '50'
   img.height = '50'
@@ -98,7 +102,7 @@ Handwriting.prototype.save = function() {
     url: 'http://money-api.9vdata.com/create',
     data: obj,
     success: function(res) {
-      $('.title2').css({ display: 'block' })
+      $('.motaik').css({ display: 'block' })
     }
   })
 }
@@ -195,6 +199,11 @@ hw.linePressure = 1.2 //设置画笔笔触压力
 hw.smoothness = 30 //设置画笔笔触大小变化的平滑度。
 
 $('.btnCanel').on('click', function() {
-  $('.title2').css({ display: 'none' })
+  $('.motaik').css({ display: 'none' })
   localStorage.removeItem('jiekuan_hetong')
+  // window.location.href = null
+  window.location.href = './home.html'
+})
+$('.button3').on('click', function() {
+  window.location.href = './home.html'
 })

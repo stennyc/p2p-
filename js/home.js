@@ -8,7 +8,7 @@
       id: +id
     },
     success: function(res) {
-      // console.log(res.data.info)
+      console.log(res)
       let list = res.data.info
       number = list.huankuan_number
       $('.statementContent').text(list.content)
@@ -19,8 +19,8 @@
   })
 
   //取消隐藏
-  $('.title').on('click', function() {
-    $(this).css({ display: 'none' })
+  $('.btnCanel1').on('click', function() {
+    $('.motaik1').css({ display: 'none' })
   })
 
   //确认信息
@@ -31,8 +31,8 @@
     }
     let arr = ary.filter(item => item == '')
     if (arr.length > 1) {
-      $('.title').text('请输入完整信息')
-      $('.title').css({ display: 'block' })
+      $('.titleAll').text('请输入完整信息')
+      $('.motaik1').css({ display: 'block' })
       return
     }
 
@@ -41,14 +41,14 @@
         .val()
         .trim() === ''
     ) {
-      $('.title').text('请输入借款姓名')
-      $('.title').css({ display: 'block' })
+      $('.titleAll').text('请输入借款姓名')
+      $('.motaik1').css({ display: 'block' })
       return
     }
 
     if (!/^1(3|4|5|7|8)\d{9}$/.test($('.phone').val())) {
-      $('.title').text('手机号码格式错误')
-      $('.title').css({ display: 'block' })
+      $('.titleAll').text('手机号码格式错误')
+      $('.motaik1').css({ display: 'block' })
       return
     }
 
@@ -57,14 +57,24 @@
         $('.card').val()
       )
     ) {
-      $('.title').text('身份证输入不合法')
-      $('.title').css({ display: 'block' })
+      $('.titleAll').text('身份证输入不合法')
+      $('.motaik1').css({ display: 'block' })
       return
     }
 
-    if (!/^[0-9]*$/.test($('.money').val())) {
-      $('.title').text('请输入借款金额')
-      $('.title').css({ display: 'block' })
+    if (
+      !/^\d+(\.\d+)?$/.test($('.money').val()) ||
+      $('.money')
+        .val()
+        .trim() == ''
+    ) {
+      $('.titleAll').text('请输入借款金额')
+      $('.motaik1').css({ display: 'block' })
+      return
+    }
+    if (!/^\d+(\.\d{1,2})?$/.test($('.money').val())) {
+      $('.titleAll').text('小数点后保留2位小数')
+      $('.motaik1').css({ display: 'block' })
       return
     }
 
@@ -81,5 +91,9 @@
     let a = JSON.stringify(obj)
     localStorage.setItem('jiekuan_hetong', a)
     window.location.href = './signature.html'
+    $('.name').val('')
+    $('.phone').val('')
+    $('.card').val('')
+    $('.money').val('')
   })
 })()
